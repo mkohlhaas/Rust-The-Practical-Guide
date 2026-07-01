@@ -1,0 +1,9 @@
+...
+fn main() {
+    ...
+    thread::spawn(|| { 
+        ...
+    });
+    let received_val = rx.recv().unwrap();
+    println!("Received: {received_val}")
+}

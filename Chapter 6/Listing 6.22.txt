@@ -1,0 +1,8 @@
+my_package/
+├── Cargo.toml
+├── src/
+│   ├── main.rs          
+│   ├── lib.rs           
+│   ├── customer.rs      
+│   └── order.rs         
+└── target/              

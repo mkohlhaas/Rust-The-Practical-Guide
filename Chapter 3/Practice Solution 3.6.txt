@@ -1,0 +1,6 @@
+fn can_see_movie(age: i32, permission: bool) -> bool {
+    (age >= 17) || (age >= 13 && permission)
+}
+fn main() {
+    println!("John who is 18, can see the move: {}", can_see_movie(17, true));
+}

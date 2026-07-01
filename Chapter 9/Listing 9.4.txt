@@ -1,0 +1,6 @@
+fn main() {
+    ...
+    let validate_user_simple = |name: &str| name.len() != 0;	// renamed
+        let validate_user_advance = |age: u8| age >= 30;
+    ...	
+}

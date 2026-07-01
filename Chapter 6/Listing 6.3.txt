@@ -1,0 +1,8 @@
+my_package/
+├── Cargo.toml
+├── src/
+│   ├── main.rs       
+│   └── lib.rs        
+├── bin/
+│   └── my_binary.rs  
+└── target/           

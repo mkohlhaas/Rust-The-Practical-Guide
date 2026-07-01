@@ -1,0 +1,5 @@
+let s1 = String::from("world");
+{
+let s2 = s1.clone();
+}
+println!(“s1 is: {s_2}”); // Error

@@ -1,0 +1,23 @@
+fn check_fruit(input_fruit: String) -> Option<String> {
+    let fruit_basket = vec![
+        String::from("mango"),
+        String::from("apple"),
+        String::from("banana"),
+    ];
+    for fruit in fruit_basket {
+        if input_fruit == fruit {
+            return Some(fruit);
+        }
+    }
+    None /* In case the if statement is not successful for any fruit in the basket,
+            then the function will return a unit type while it is expecting an Option   
+            enum.
+            Therefore we need to explicitly return the None variant */
+}
+
+fn main() {
+    let user_fruit = String::from("apple");
+    if let Some(fruit) = check_fruit(user_fruit) {
+        println!("User's name: {fruit}");
+    }
+}

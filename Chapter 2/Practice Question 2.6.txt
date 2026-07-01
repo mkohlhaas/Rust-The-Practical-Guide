@@ -1,0 +1,5 @@
+fn main() {
+    let pi: i32;
+    pi = 3.14159; // This value represents pi 
+    println!("pi is: {}", pi);
+}

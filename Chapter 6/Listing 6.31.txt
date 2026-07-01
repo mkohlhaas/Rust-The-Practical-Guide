@@ -1,0 +1,9 @@
+pub mod product {
+    ...
+}
+pub mod customer {
+    ...
+}
+mod order {
+    ...
+}
