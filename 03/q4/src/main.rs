@@ -1,0 +1,10 @@
+fn palindrome(input: String) -> bool {
+  /* Your Code here */
+}
+fn main() {
+  let input = String::from("1211");
+  println!(
+    "It is {:?} that the given string is palindrome",
+    palindrome(input)
+  );
+}
