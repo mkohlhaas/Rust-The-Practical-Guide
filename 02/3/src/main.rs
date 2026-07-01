@@ -1,0 +1,8 @@
+fn main() {
+  let x = 30;
+  {
+    let x = 40;
+    println!("inner x is: {x}");
+  }
+  println!("x is: {x}");
+}

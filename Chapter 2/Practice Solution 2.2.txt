@@ -1,9 +1,0 @@
-fn main(){
-    let x1 = 40;
-    let mut x2 = x1;
-    x2 = x1-2;    
-    println!("x1 is: {} and x2 is: {}", x1,x2); 
- }
-  // Note: There will be a warning when you execute that the value of x2 has been immediately 
- // overwritten before being read. You may just ignore it otherwise add the line     #![ allow(unused)] at the top
- // before the fn main() if you do want to see the warning.

@@ -1,0 +1,5 @@
+fn main() {
+  let a = "three";
+  let a = 10;
+  println!("a is: {}", a);
+}

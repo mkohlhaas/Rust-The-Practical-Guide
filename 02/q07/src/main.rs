@@ -1,0 +1,10 @@
+fn main() {
+  let a: DATA_TYPES_PLEASE = -15;
+  let b: DATA_TYPES_PLEASE = 170;
+  let name: DATA_TYPES_PLEASE = "Michael";
+  println!(
+    "name is: {}, and the multiplication result is {}",
+    name,
+    a * b
+  );
+}
