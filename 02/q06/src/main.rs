@@ -1,5 +1,8 @@
+// Adjusting variable type for floating-point assignment
+
 fn main() {
-  let pi: i32;
-  pi = 3.14159; // This value represents pi 
+  let pi: f64;
+  pi = 3.14159; // This value represents pi
+
   println!("pi is: {}", pi);
 }

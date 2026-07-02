@@ -1,7 +1,10 @@
+// Assigning appropriate data types to variables
+
 fn main() {
-  let a: DATA_TYPES_PLEASE = -15;
-  let b: DATA_TYPES_PLEASE = 170;
-  let name: DATA_TYPES_PLEASE = "Michael";
+  let a: i32 = -15;
+  let b: i32 = 170;
+  let name: &str = "Michael";
+
   println!(
     "name is: {}, and the multiplication result is {}",
     name,

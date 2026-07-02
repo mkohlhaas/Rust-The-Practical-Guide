@@ -4,4 +4,6 @@ fn main() {
     let last_name = "Archer";
     format!("{first_name} {last_name}")
   };
+
+  println!("{full_name}")
 }

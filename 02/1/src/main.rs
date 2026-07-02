@@ -2,5 +2,5 @@ fn main() {
   {
     let i = 50;
   }
-  let j = i; // Error
+  let j = i; // ⚠️ Error
 }
