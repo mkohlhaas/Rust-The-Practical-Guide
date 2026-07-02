@@ -1,6 +1,7 @@
 fn main() {
   let marks = 95;
-  let mut grade = if marks >= 90 {
+
+  let grade = if marks >= 90 {
     'A'
   } else if marks >= 80 {
     'B'
@@ -9,4 +10,6 @@ fn main() {
   } else {
     'F'
   };
+
+  println!("Grade: {grade}")
 }

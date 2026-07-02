@@ -9,8 +9,8 @@ fn main() {
   let mut sum_of_squares = 0;
 
   for i in 1..=n {
-    square_of_sum = square_of_sum + i;
-    sum_of_squares = sum_of_squares + i.pow(2);
+    square_of_sum += i;
+    sum_of_squares += i.pow(2);
   }
 
   let difference = square_of_sum.pow(2) - sum_of_squares;

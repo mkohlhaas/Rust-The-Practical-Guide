@@ -1,3 +1,5 @@
+// Calculate the difference between square of sum and sum of squares
+
 fn main() {
   let mut n = String::new();
   std::io::stdin()

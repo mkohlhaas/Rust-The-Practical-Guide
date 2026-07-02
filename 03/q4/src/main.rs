@@ -1,6 +1,9 @@
+// Check if a string is a palindrome
+
 fn palindrome(input: String) -> bool {
   /* Your Code here */
 }
+
 fn main() {
   let input = String::from("1211");
   println!(

@@ -4,11 +4,14 @@ fn main() {
     .read_line(&mut n)
     .expect("failed to read input.");
   let n: u32 = n.trim().parse().expect("invalid input");
+
   let mut sum: u32 = 0;
+
   for i in 1..n {
     if i % 3 == 0 || i % 5 == 0 {
-      sum = sum + i;
+      sum += i;
     }
   }
+
   println!("\n\n The sum of the multiples are = {sum}");
 }

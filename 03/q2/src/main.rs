@@ -1,3 +1,5 @@
+// Sum of multiples of 3 or 5 below a given number
+
 fn main() {
   let mut n = String::new();
   std::io::stdin()

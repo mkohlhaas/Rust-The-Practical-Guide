@@ -1,5 +1,6 @@
 fn total_production(hours: u8, speed: u8) -> f32 {
   let success_rate: f32;
+
   if speed <= 4 {
     success_rate = 1.0;
   } else if speed >= 5 && speed <= 8 {
@@ -7,10 +8,13 @@ fn total_production(hours: u8, speed: u8) -> f32 {
   } else {
     success_rate = 0.77;
   }
+
   hours as f32 * 221.0 * success_rate * speed as f32
 }
+
 fn cars_produced_per_minutes(hours: u8, speed: u8) -> f32 {
   let success_rate: f32;
+
   if speed <= 4 {
     success_rate = 1.0;
   } else if speed >= 5 && speed <= 8 {
@@ -18,6 +22,7 @@ fn cars_produced_per_minutes(hours: u8, speed: u8) -> f32 {
   } else {
     success_rate = 0.77;
   }
+
   (hours as f32 * 221.0 * success_rate * speed as f32) / (60.0 * hours as f32)
 }
 fn main() {

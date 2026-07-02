@@ -1,3 +1,5 @@
+// Calculating car production in an assembly line
+
 fn total_production(hours: u8, speed: u8) -> f32 {
   let success_rate: f32;
   /* Your code below this line*/

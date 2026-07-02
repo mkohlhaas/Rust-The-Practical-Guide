@@ -1,5 +1,8 @@
+// Finding a Pythagorean triplet with a given sum
+
 fn main() {
   let mut flag = true;
+
   for a in 1..=1000 {
     for b in a + 1..1000 {
       // this ensures that a < b
