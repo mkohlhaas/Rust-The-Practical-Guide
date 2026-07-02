@@ -1,8 +1,12 @@
-fn main() {
-  let vec_1 = vec![1, 2, 3];
-  takes_ownership(vec_1.clone());
-  println!("vec 1 is: {:?}", vec_1);
-}
 fn takes_ownership(vec: Vec<i32>) {
   println!("vec is: {:?}", vec);
+}
+
+fn main() {
+  let vec1 = vec![1, 2, 3];
+
+  // Vec<…> is not Copy but Clone.
+  takes_ownership(vec1.clone());
+
+  println!("vec1: {:?}", vec1);
 }

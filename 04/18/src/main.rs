@@ -1,9 +1,12 @@
-fn main() {
-  let vec_1 = vec![1, 2, 3];
-  let ref1 = &vec_1;
-  borrows_vec(ref1);
-  println!("vec 1 is: {:?}", vec_1);
-}
 fn borrows_vec(vec: &Vec<i32>) {
-  println!("vec is: {:?}", vec);
+  println!("vec: {:?}", vec);
+}
+
+fn main() {
+  let vec1 = vec![1, 2, 3];
+  let ref1 = &vec1;
+
+  borrows_vec(ref1);
+  println!("vec1: {:?}", vec1);
+  println!("ref1: {:?}", ref1);
 }

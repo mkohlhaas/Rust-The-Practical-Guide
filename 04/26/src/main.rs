@@ -1,5 +1,6 @@
 fn main() {
-  let mut some_data = 42;
+  // i32 is Copy
+  let mut some_data: i32 = 42;
   let ref1 = &mut some_data;
   let deref_copy = *ref1;
   *ref1 = 13;

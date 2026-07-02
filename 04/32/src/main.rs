@@ -1,7 +1,9 @@
+#![allow(unused_variables, unused_assignments)]
+
 fn main() {
-  let mut vec_1 = vec![1, 2, 3];
-  let mut vec_2 = vec![4, 5, 6];
-  let mut reference = &mut vec_1;
+  let mut vec1 = vec![1, 2, 3];
+  let mut vec2 = vec![4, 5, 6];
+  let mut reference = &mut vec1;
   reference.push(10);
-  reference = &mut vec_2;
+  reference = &mut vec2;
 }
