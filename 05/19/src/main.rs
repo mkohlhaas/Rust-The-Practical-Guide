@@ -1,5 +1,5 @@
 enum TravelType {
-    Car(f32),
-    Train(f32),
-    Airplane(f32),
+  Car(f32),
+  Train(f32),
+  Airplane(f32),
 }

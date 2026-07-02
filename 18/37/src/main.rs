@@ -1,5 +1,5 @@
 impl WordDictionary {
-    fn new() -> Self {
-        Self::default()
-    }
-} 
+  fn new() -> Self {
+    Self::default()
+  }
+}

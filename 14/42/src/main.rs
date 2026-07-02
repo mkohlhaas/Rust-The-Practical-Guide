@@ -1,7 +1,7 @@
 async fn printing() {
-    println!("I am async function");
+  println!("I am async function");
 }
 
 fn main() {
-    printing();
+  printing();
 }

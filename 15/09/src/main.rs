@@ -5,5 +5,5 @@ macro_rules! our_macro {
     };
 }
 fn main() {
-    println!("{}", our_macro!(5, 6, 3)); // Error
+  println!("{}", our_macro!(5, 6, 3)); // Error
 }

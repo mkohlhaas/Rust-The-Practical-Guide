@@ -1,26 +1,26 @@
 use std::thread;
-fn main() {   
-    let handle_1 = thread::spawn(|| {
-        let mut sum = 0;
-        let range = 0..=1_000;
-        for num in range {
-            sum += num;
-        }
-        sum
-    });   
-// Note: The thread spawn returns a joinhandle type. If there is anything returned from 
-
-// closure inside the thread, it will be inside the joinhandle type. In this case, it will be Joinhandle<i32>. 
-
-// You can access the returned i32 value by calling .unwrap() on join.   
-
-// Todo!: Insert a code for creating another thread which will compute the summation from 1001 - 2000    
-
-// Todo!: Insert a code for creating another thread which will compute the summation from 2001 - 3000
+fn main() {
+  let handle_1 = thread::spawn(|| {
     let mut sum = 0;
+    let range = 0..=1_000;
+    for num in range {
+      sum += num;
+    }
+    sum
+  });
+  // Note: The thread spawn returns a joinhandle type. If there is anything returned from
 
-// Todo!: Insert code to make sure that the summation is computed correctly. 
-// Summation will be computed correctly, if all the threads go to completion. 
+  // closure inside the thread, it will be inside the joinhandle type. In this case, it will be Joinhandle<i32>.
 
-       println!("Final Summation Result {sum}");
+  // You can access the returned i32 value by calling .unwrap() on join.
+
+  // Todo!: Insert a code for creating another thread which will compute the summation from 1001 - 2000
+
+  // Todo!: Insert a code for creating another thread which will compute the summation from 2001 - 3000
+  let mut sum = 0;
+
+  // Todo!: Insert code to make sure that the summation is computed correctly.
+  // Summation will be computed correctly, if all the threads go to completion.
+
+  println!("Final Summation Result {sum}");
 }

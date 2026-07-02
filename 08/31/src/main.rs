@@ -4,4 +4,4 @@ impl OtherTrait for Square {}
 
 trait SomeOtherTrait {}
 impl SomeOtherTrait for Rectangle {}
-impl SomeOtherTrait for Square {} 
+impl SomeOtherTrait for Square {}

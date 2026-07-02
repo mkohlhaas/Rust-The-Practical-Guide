@@ -1,17 +1,18 @@
 struct Container<T> {
-    value: T,
+  value: T,
 }
 impl<T> Container<T> {
-    fn new(value: T) -> Container<T> {   // we need to remove duplicate definitions for create fn
-        Container { value }
-    }
+  fn new(value: T) -> Container<T> {
+    // we need to remove duplicate definitions for create fn
+    Container { value }
+  }
 }
 impl Container<i32> {
-    fn display(&self) {
-        println!("The value inside the container is: {}", self.value);
-    }
-    fn create(value: i32) -> Container<i32> {
-        Container { value }
-    }
+  fn display(&self) {
+    println!("The value inside the container is: {}", self.value);
+  }
+  fn create(value: i32) -> Container<i32> {
+    Container { value }
+  }
 }
-fn main() {} 
+fn main() {}

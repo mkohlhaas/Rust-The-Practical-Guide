@@ -1,4 +1,4 @@
 fn some_fn<T: ?Sized + std::fmt::Debug>(val: T) {
-    println!("{:?}", val)
+  println!("{:?}", val)
 }
-fn main() {} 
+fn main() {}

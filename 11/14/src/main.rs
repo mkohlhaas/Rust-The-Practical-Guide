@@ -1,11 +1,11 @@
 #[derive(Debug)]
 struct Linkedlist {
-    head: pointer,
+  head: pointer,
 }
 
 #[derive(Debug)]
 struct Node {
-    element: i32,
-    next: pointer,
+  element: i32,
+  next: pointer,
 }
-type pointer = Option<Box<Node>>; 
+type pointer = Option<Box<Node>>;

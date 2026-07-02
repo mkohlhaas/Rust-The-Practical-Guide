@@ -1,5 +1,5 @@
 pub enum Category {
-    Electronics,
-    Clothing,
-    Books,
+  Electronics,
+  Clothing,
+  Books,
 }

@@ -1,6 +1,6 @@
 fn main() {
-    // Original JSON string with escaped quotes
-    let json_data = "{
+  // Original JSON string with escaped quotes
+  let json_data = "{
         \"user\": \"Alice\", 
         \"details\": { 
             \"age\": 29, 
@@ -9,8 +9,8 @@ fn main() {
         \"active\": true
     }";
 
-    // Refactored JSON string using raw string literal
-    let json_data_raw = r#"{
+  // Refactored JSON string using raw string literal
+  let json_data_raw = r#"{
         "user": "Alice", 
         "details": { 
             "age": 29, 
@@ -19,6 +19,6 @@ fn main() {
         "active": true
     }"#;
 
-    println!("Original: {}", json_data);
-    println!("Refactored: {}", json_data_raw);
+  println!("Original: {}", json_data);
+  println!("Refactored: {}", json_data_raw);
 }

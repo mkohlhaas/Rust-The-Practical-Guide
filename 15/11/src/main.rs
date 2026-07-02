@@ -4,5 +4,5 @@ use std::prelude::rust_2021::*;
 #[macro_use]
 extern crate std;
 fn main() {
-    1 + 1;
+  1 + 1;
 }

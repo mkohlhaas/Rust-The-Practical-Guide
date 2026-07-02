@@ -8,5 +8,5 @@ macro_rules! sum_macro {
     };
 }
 fn main() {
-    let result = sum_macro!(1, 2, 3, 4, 5);
+  let result = sum_macro!(1, 2, 3, 4, 5);
 }

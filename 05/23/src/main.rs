@@ -1,9 +1,9 @@
 fn main() {
-    let student_db = vec![
-	...
+  let student_db = vec![
+  ...
         Student {
-    		name: string::from("Charlie"),
-    		grade: 0,
-	},
+        name: string::from("Charlie"),
+        grade: 0,
+  },
     ];
 }

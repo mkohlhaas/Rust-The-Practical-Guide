@@ -1,10 +1,10 @@
 fn option(opt: Option<&i32>) -> &i32 {
-    opt.unwrap()
+  opt.unwrap()
 }
 fn main() {
-    let answer = { 
-        let y = 4; // move this line only 
-        option(Some(&y)) 
-    };
-    assert_eq!(answer, &4);
+  let answer = {
+    let y = 4; // move this line only 
+    option(Some(&y))
+  };
+  assert_eq!(answer, &4);
 }

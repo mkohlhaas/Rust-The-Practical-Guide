@@ -1,5 +1,5 @@
 fn main() {
-    let x = "my name";
-    print_fn(x);
-    print_fn(&x);
+  let x = "my name";
+  print_fn(x);
+  print_fn(&x);
 }

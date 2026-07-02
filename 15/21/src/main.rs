@@ -4,6 +4,6 @@ use std::prelude::rust_2021::*;
 #[macro_use]
 extern crate std;
 fn main() {
-    let mut x = 4;
-    x = x + 1;
+  let mut x = 4;
+  x = x + 1;
 }

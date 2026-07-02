@@ -1,4 +1,4 @@
 struct Student {
-    name: String,
-    grade: Option<u32>,
+  name: String,
+  grade: Option<u32>,
 }

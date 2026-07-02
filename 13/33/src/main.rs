@@ -1,3 +1,3 @@
 fn main() {
-    println!("{}", size_of::<ABC>());
+  println!("{}", size_of::<ABC>());
 }

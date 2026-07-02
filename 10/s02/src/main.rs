@@ -1,11 +1,11 @@
 fn identity(a: &i32) -> &i32 {
-    a
+  a
 }
 fn main() {
-    let mut x_ref: Option<&i32> = None;
-    {
-        let x = 7;
-        x_ref = Some(identity(&x));
-            assert_eq!(*x_ref.unwrap(), 7);
-    }
+  let mut x_ref: Option<&i32> = None;
+  {
+    let x = 7;
+    x_ref = Some(identity(&x));
+    assert_eq!(*x_ref.unwrap(), 7);
+  }
 }

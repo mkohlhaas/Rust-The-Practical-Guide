@@ -1,11 +1,11 @@
 fn main() {
-    let result = {
-        let mut sum = 0;
-        sum += 1;
-        sum += 2;
-        sum += 3;
-        sum += 4;
-        sum += 5;
-        sum
-    };
+  let result = {
+    let mut sum = 0;
+    sum += 1;
+    sum += 2;
+    sum += 3;
+    sum += 4;
+    sum += 5;
+    sum
+  };
 }

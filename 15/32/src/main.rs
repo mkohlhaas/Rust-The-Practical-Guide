@@ -8,7 +8,7 @@ macro_rules! string_concat {
 }
 
 fn main() {
-    let str_null = string_concat!();
-    let str_single = string_concat!("First"); // Error 
-    let str_double = string_concat!("First" "Second"); // Error
+  let str_null = string_concat!();
+  let str_single = string_concat!("First"); // Error 
+  let str_double = string_concat!("First" "Second"); // Error
 }

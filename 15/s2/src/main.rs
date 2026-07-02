@@ -6,10 +6,10 @@ macro_rules! make_struct {
     };
 }
 
-// Sample usage 
+// Sample usage
 make_struct!(MyStruct {
-    field1: i32,
-    field2: String
+  field1: i32,
+  field2: String
 });
 
-fn main(){}
+fn main() {}

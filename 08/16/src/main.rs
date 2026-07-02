@@ -1,3 +1,3 @@
 trait Shape {
-    fn area(&self) -> f32;
-}  
+  fn area(&self) -> f32;
+}

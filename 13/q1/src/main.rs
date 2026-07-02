@@ -1,4 +1,4 @@
 use std::mem::size_of;
 fn main() {
-    println!("[i32] size is: {}", size_of::<[i32]>()); // Error: Size cannot be known at compile time
+  println!("[i32] size is: {}", size_of::<[i32]>()); // Error: Size cannot be known at compile time
 }

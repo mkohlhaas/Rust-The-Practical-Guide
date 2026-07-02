@@ -6,5 +6,5 @@ macro_rules! our_macro {
     };
 }
 fn main() {
-    println!("{}", our_macro!(2, 2));
+  println!("{}", our_macro!(2, 2));
 }

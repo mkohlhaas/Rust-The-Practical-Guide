@@ -1,6 +1,6 @@
 trait Some_Trait {
-    fn method(&self);
+  fn method(&self);
 }
 impl<T> Some_Trait for [T] {
-    fn method(&self) {}
+  fn method(&self) {}
 }

@@ -1,8 +1,8 @@
 impl DoublyLinkedlist {
-    fn new() -> Self {
-        DoublyLinkedlist {
-            head: None,
-            tail: None,
-        }
+  fn new() -> Self {
+    DoublyLinkedlist {
+      head: None,
+      tail: None,
     }
+  }
 }

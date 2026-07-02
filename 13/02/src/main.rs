@@ -1,4 +1,4 @@
 struct Point {
-    x: bool,
-    y: i64,
+  x: bool,
+  y: i64,
 }

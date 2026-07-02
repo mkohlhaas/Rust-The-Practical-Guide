@@ -3,4 +3,4 @@ struct ABC;
 #[negative_impl]
 impl !Send for ABC {}
 #[negative_impl]
-impl !Sync for ABC {} 
+impl !Sync for ABC {}

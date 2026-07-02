@@ -1,3 +1,3 @@
 struct DisplayLobby {
-    stack: Vec<Rc<RefCell<Node>>>,
+  stack: Vec<Rc<RefCell<Node>>>,
 }

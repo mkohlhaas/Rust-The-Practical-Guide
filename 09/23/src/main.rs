@@ -1,3 +1,3 @@
 struct BookIterator {
-    properties: Vec<String>,
+  properties: Vec<String>,
 }

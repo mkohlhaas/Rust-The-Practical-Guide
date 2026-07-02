@@ -9,8 +9,8 @@ macro_rules! make_functions {
 }
 make_functions!(foo: i32 => 42, bar: String => "hello world".to_owned());
 fn main() {
-    let result1 = foo();
-    let result2 = bar();
-    println!("foo result: {}", result1);
-    println!("bar result: {}", result2);
+  let result1 = foo();
+  let result2 = bar();
+  println!("foo result: {}", result1);
+  println!("bar result: {}", result2);
 }
