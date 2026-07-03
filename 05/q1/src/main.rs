@@ -1,6 +1,7 @@
 #[derive(Debug)]
 enum Value {
-  // Add code here
+  Integer(i32),
+  Float(f32),
 }
 
 fn main() {

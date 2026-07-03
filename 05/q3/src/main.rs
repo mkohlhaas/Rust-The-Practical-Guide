@@ -9,7 +9,7 @@ fn first_character(chars: &Vec<char>) -> Option<char> {
 fn main() {
   let my_chars = vec!['a', 'b', 'c', 'd'];
   match first_character(&my_chars) {
-    Some => println!("First character: {character}"),
+    Some(character) => println!("First character: {character}"),
     None => println!("Empty array"),
   }
 }

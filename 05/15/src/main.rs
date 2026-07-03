@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 enum WeekDay {
   Monday,
   Tuesday,
@@ -7,3 +9,5 @@ enum WeekDay {
   Saturday,
   Sunday,
 }
+
+fn main() {}

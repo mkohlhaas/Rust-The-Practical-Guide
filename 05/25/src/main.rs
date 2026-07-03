@@ -1,3 +1,10 @@
+#![allow(dead_code, unused_variables)]
+
+struct Student {
+  name: String,
+  grade: Option<u32>,
+}
+
 fn main() {
   let student_db = vec![
     Student {

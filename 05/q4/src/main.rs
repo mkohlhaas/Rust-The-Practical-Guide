@@ -4,11 +4,14 @@ fn check_fruit(input_fruit: String) -> Option<String> {
     String::from("apple"),
     String::from("banana"),
   ];
+
   for fruit in fruit_basket {
     if input_fruit == fruit {
       return Some(fruit);
     }
   }
+
+  None
 }
 
 fn main() {

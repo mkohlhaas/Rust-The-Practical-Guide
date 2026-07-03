@@ -1,10 +1,32 @@
-Impl Car {
-	fn display_car_info(&self) { // First form: &self
-		println!(
-		“owner: {}, Year: {}, Price: {}”, 
-		self.owner, self.year, self.price);    
-	}
-    	fn refuel(&mut self, gallons: f32) { // Second form: &mut self
-        	self.fuel_level += gallons;
-    	}
+struct Car {
+  owner: String,
+  year: u32,
+  fuel_level: f32,
+  price: u32,
+}
+
+impl Car {
+  fn display_car_info(&self) {
+    println!(
+      "owner: {}, Year: {}, Price: {}, Fuel Level: {}",
+      self.owner, self.year, self.price, self.fuel_level
+    );
+  }
+
+  fn refuel(&mut self, gallons: f32) {
+    self.fuel_level += gallons;
+  }
+}
+
+fn main() {
+  let mut my_car = Car {
+    owner: String::from("ABC"),
+    year: 2010,
+    fuel_level: 0.0,
+    price: 5_000,
+  };
+  my_car.display_car_info();
+
+  my_car.refuel(10.0);
+  my_car.display_car_info();
 }
