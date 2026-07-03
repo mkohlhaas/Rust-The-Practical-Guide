@@ -1,4 +1,8 @@
-mod University {
+// Fixing access to private fields in a struct
+
+#![allow(dead_code)]
+
+mod university {
   pub struct Student {
     pub name: String, // fields need to be made public
     pub marks: u8,
@@ -6,13 +10,14 @@ mod University {
   }
 }
 
-use University::Student;
+use university::Student;
 
 fn main() {
-  let mut student_1 = Student {
+  let student1 = Student {
     name: String::from("Alice"),
     marks: 75,
     grade: 'A',
   };
-  println!("{} got {} grade", student_1.name, student_1.grade);
+
+  println!("{} got {} grade", student1.name, student1.grade);
 }

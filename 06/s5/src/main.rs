@@ -1,11 +1,17 @@
+// Re-exporting functions for simplified access
+
 mod graphics {
   pub use self::display::show_area;
   pub use self::shapes::calculate_area;
+
   pub mod shapes {
+    use std::f64::consts::PI;
+
     pub fn calculate_area(radius: f64) -> f64 {
-      std::f64::consts::PI * radius * radius
+      PI * radius * radius
     }
   }
+
   pub mod display {
     pub fn show_area(shape: &str, area: f64) {
       println!("The area of the {} is: {}", shape, area);
@@ -15,6 +21,7 @@ mod graphics {
 
 use graphics::calculate_area;
 use graphics::show_area;
+
 fn main() {
   let radius = 3.0;
   let area = calculate_area(radius);

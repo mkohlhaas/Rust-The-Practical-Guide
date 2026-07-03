@@ -1,3 +1,7 @@
+// Fixing module import and function usage
+
+#![allow(dead_code)]
+
 mod seasons {
   pub enum Season {
     Spring,
@@ -13,7 +17,9 @@ mod seasons {
     }
   }
 }
+
 use seasons::{Season, is_holiday};
+
 fn main() {
   let current_season = Season::Autumn;
   if is_holiday(&current_season) {

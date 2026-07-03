@@ -1,19 +1,23 @@
-struct Product {
-  id: u64,
-  name: String,
-  price: f64,
-  category: Category,
-}
+#![allow(dead_code)]
+
 enum Category {
   Electronics,
   Clothing,
   Books,
 }
 
+struct Product {
+  id: u64,
+  name: String,
+  price: f64,
+  category: Category,
+}
+
 impl Product {
   fn calculate_tax(&self) -> f64 {
     self.price * 0.1
   }
+
   fn product_price(&self) -> f64 {
     self.price + self.calculate_tax()
   }
@@ -41,3 +45,5 @@ impl Order {
     total_before_discount - (total_before_discount * discount)
   }
 }
+
+fn main() {}
