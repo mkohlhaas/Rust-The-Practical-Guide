@@ -1,7 +1,11 @@
 use std::{cell::RefCell, rc::Rc};
+
 fn main() {
-  let a = Rc::new(RefCell::new(String::from("c++")));
-  let b = Rc::clone(&a);
-  *b.borrow_mut() = String::from("rust");
+  // both a and b are owners of the interior String
+  let a: Rc<RefCell<String>> = Rc::new(RefCell::new(String::from("C++")));
+  let b: Rc<RefCell<String>> = Rc::clone(&a);
+
+  *b.borrow_mut() = String::from("Rust");
+
   println!("{:?}", a);
 }

@@ -1,3 +1,11 @@
+use rand::random;
+
+fn picking_int<'a>(i: &'a i32, j: &'a i32) -> &'a i32 {
+  if random() { i } else { j }
+}
+
+// int1 and int2 basically have the same lifetimes.
+
 fn main() {
   let int1 = 5; // int1 lifetime starts
   let int2 = 10; // int2 lifetime starts

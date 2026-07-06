@@ -1,5 +1,6 @@
 fn main() {
-  let i;
+  let i: &i32;
+
   {
     let j = 5;
     i = &j;

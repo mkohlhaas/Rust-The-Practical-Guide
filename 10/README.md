@@ -1,0 +1,23 @@
+- Lifetimes ensure references are valid as long as needed.
+- Lifetime elision simplifies code by inferring lifetimes automatically.
+- Deref coercion is a mechanism that simplifies working with smart pointers by automatically converting them to reference types, thus enabling seamless interaction with values stored on the heap.
+- Lifetimes may be better understood by breaking them into concrete lifetimes and generic lifetimes.
+- We can either have one mutable reference or multiple immutable references at any given time.
+  In other words, immutable and mutable references should not coexist!
+- Lifetime specifiers, also known as generic lifetime annotations, provide a way to describe relationships between the lifetimes of references.
+  - They shouldn’t be confused with concrete lifetimes, which are specific, but rather are used to generalize those relationships.
+- Lifetime Elision Rules
+  - 1. Each parameter that is a reference gets its own lifetime parameter annotation.
+  - 2. If there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetimes.
+  - 3. If there are multiple input lifetime parameters, but one of them is a reference to self or a mutable reference to self, the lifetime of self is assigned to all output lifetimes. (Only applies to methods.)
+- Lifetime Elisions for Structs
+  - Unlike functions, lifetime elisions are not defined for structs.
+  - You would expect the compiler to add this information automatically.
+  - However, the compiler will not!
+- The Rc is a single-threaded reference counting smart pointer which enables multiple ownership of data.
+  - https://doc.rust-lang.org/std/rc/struct.Rc.html
+- RefCell is an interiorly mutable memory location with dynamically checked borrow rules (single ownership).
+  - https://doc.rust-lang.org/std/cell/struct.RefCell.html
+- Combing RefCell with Rc:
+  - An Rc pointer wrapped with RefCell (Rc<RefCell<T>>) offers multiple owners with interior mutability.
+- Deref Coercion works only for immutable references (&T).
