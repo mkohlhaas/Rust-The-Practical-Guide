@@ -1,14 +1,20 @@
+#![allow(dead_code)]
+
+// Rc offers multiple ownership, RefCell offers (interior) mutability for every owner
+type Pointer = Option<Rc<RefCell<Node>>>;
+
 use std::{cell::RefCell, rc::Rc};
 #[derive(Debug)]
 struct DoublyLinkedlist {
-  head: pointer,
-  tail: pointer,
+  head: Pointer,
+  tail: Pointer,
 }
 
 #[derive(Debug)]
 struct Node {
   element: i32,
-  next: pointer,
-  previous: pointer,
+  next: Pointer,
+  previous: Pointer,
 }
-type pointer = Option<Rc<RefCell<Node>>>;
+
+fn main() {}

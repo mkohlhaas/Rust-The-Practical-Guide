@@ -1,5 +1,8 @@
+#![allow(dead_code)]
+
 use std::cell::RefCell;
 use std::rc::Rc;
+
 #[derive(Debug)]
 struct Node {
   next: Option<Rc<RefCell<Node>>>,
@@ -10,3 +13,5 @@ impl Drop for Node {
     println!("Dropping {:?}", self);
   }
 }
+
+fn main() {}

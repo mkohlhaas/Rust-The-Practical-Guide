@@ -1,11 +1,16 @@
+#![allow(dead_code)]
+
 #[derive(Debug)]
 struct Linkedlist {
-  head: pointer,
+  head: Pointer,
 }
 
 #[derive(Debug)]
 struct Node {
   element: i32,
-  next: pointer,
+  next: Pointer,
 }
-type pointer = Option<Box<Node>>;
+
+type Pointer = Option<Box<Node>>;
+
+fn main() {}
