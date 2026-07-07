@@ -1,6 +1,11 @@
-#[derive(Debug, Default)]
-pub struct Student {
-  id: u8,
-  pub age: u8,
-  pub name: String,
+#![allow(unused_imports, unused_variables)]
+
+use foo::Student;
+
+fn main() {
+  let student1 = Student {
+    id: 11, // ⚠️ Error
+    age: 20,
+    name: "Joseph".to_string(),
+  };
 }

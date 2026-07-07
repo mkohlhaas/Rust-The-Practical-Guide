@@ -1,6 +1,9 @@
-use using_patterns::Student;
+#![allow(unused_variables)]
+
+use foo::Student;
+
 fn main() {
-  let std_1 = Student {
+  let student1 = Student {
     age: 20,
     name: "Joseph".to_string(),
   };

@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 #[derive(Debug, Default, Clone)]
 struct Customer {
   name: String,
@@ -10,13 +12,15 @@ struct Customer {
 
 #[derive(Debug, Clone)]
 enum Membershiptype {
-  new,
-  causual,
-  loyal,
+  New,
+  Causual,
+  Loyal,
 }
 
 impl Default for Membershiptype {
   fn default() -> Self {
-    Membershiptype::new
+    Membershiptype::New
   }
 }
+
+fn main() {}

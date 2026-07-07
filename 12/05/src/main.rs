@@ -1,9 +1,8 @@
-impl Student {
-  pub fn new(std_name: String) -> Self {
-    Self {
-      id: 0,
-      age: 20,
-      name: std_name,
-    }
-  }
+#![allow(unused_variables, unused_imports)]
+
+use foo::Student;
+
+fn main() {
+  let student1 = Student::new("Joseph".to_string());
+  println!("{:?}", student1);
 }
