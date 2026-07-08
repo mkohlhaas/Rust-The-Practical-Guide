@@ -1,22 +1,18 @@
-#[derive(Debug)]
-struct Circle;
+#![allow(dead_code)]
 
-#[derive(Debug)]
+trait Shape {}
+
+struct Circle;
 struct Rectangle;
 
-impl Shape for Circle {
-  fn print(&self) {
-    println!("{:?}", self);
-  }
-}
+impl Shape for Circle {}
+impl Shape for Rectangle {}
 
-impl Shape for Rectangle {
-  fn print(&self) {
-    println!("{:?}", self);
-  }
-}
 fn main() {
-  println!("Size of &Cricle is: {}", size_of::<&Circle>());
-  println!("Size of &Rectangle is: {}", size_of::<&Rectangle>());
-  println!("Size of &dyn Shape: {}", size_of::<&dyn Shape>());
+  // references to structs (thin pointers)
+  println!("Size of &Circle:    {}", size_of::<&Circle>()); //    8
+  println!("Size of &Rectangle: {}", size_of::<&Rectangle>()); // 8
+
+  // trait object is a fat pointer (pointer + vtable)
+  println!("Size of &dyn Shape: {}", size_of::<&dyn Shape>()); // 16
 }
