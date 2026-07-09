@@ -1,10 +1,14 @@
 use std::thread;
+
+// Scoped Threads
+
 fn main() {
-    let mut vec = vec![1, 2, 3];
-    thread::scope(|some_scope| {
-        some_scope.spawn(|| {
-   println!("Thread inside scope);
-            println!("{:?}", vec);
-        });
+  let vec = vec![1, 2, 3];
+
+  thread::scope(|s| {
+    s.spawn(|| {
+      println!("Thread inside scope");
+      println!("{:?}", vec);
     });
+  });
 }

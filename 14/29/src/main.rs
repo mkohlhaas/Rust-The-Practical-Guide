@@ -1,22 +1,25 @@
-use std::{
-  sync::{Arc, Barrier, Mutex},
-  thread,
-};
-fn main() {
-  let mut threads_vec = Vec::new();
-  let task = Arc::new(Mutex::new(vec![]));
+use std::sync::{Arc, Mutex};
+use std::thread;
 
-  for i in 0..5 {
-    let task = task.clone();
+// Motivating Example for Barriers
+
+fn main() {
+  let vec_string = Arc::new(Mutex::new(vec![]));
+
+  let mut threads_vec = Vec::new();
+
+  // 5 threads, 2 tasks
+  // Second Task should only start processing once Task 1 is complete.
+  for i in 1..=5 {
+    let vec_string_clone = vec_string.clone();
     let handle = thread::spawn(move || {
       // Tasks 1
-      task
+      vec_string_clone
         .lock()
         .unwrap()
         .push(format!("Thread {i}, Completed its part on Task 1"));
-
       // Task 2
-      task
+      vec_string_clone
         .lock()
         .unwrap()
         .push(format!("Thread {i}, Completed its part on Task 2"));
@@ -28,8 +31,11 @@ fn main() {
     handle.join().unwrap();
   }
 
-  let task_lock = &*task.lock().unwrap();
-  for contents in task_lock {
-    println!("{contents}");
+  let task_lock: &Vec<String> = &*vec_string.lock().unwrap();
+
+  for msg in task_lock {
+    println!("{msg}");
   }
+
+  println!("Done!");
 }

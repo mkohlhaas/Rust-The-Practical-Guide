@@ -4,4 +4,4 @@ async fn printing() {
 
 async fn main() { 
     let x = printing().await; 
-}.await // Error
+}.await // ⚠️ Error: no, doesn't work like that

@@ -1,23 +1,51 @@
-use std::sync::{mpsc, Arc, Mutex};
-use std::thread;
-use std::time::{Duration, Instant};
-use ureq::{Agent, AgentBuilder};
+#![allow(unused_variables)]
+
+use std::sync::Arc;
+use std::thread::{self, JoinHandle};
+use std::time::Instant;
+use ureq::AgentBuilder;
+
 fn main() -> Result<(), ureq::Error> {
-    ...
-    let now = Instant::now();
-    let agent = Arc::new(agent);
-    let mut handles: Vec<thread::JoinHandle<Result<(), ureq::Error>>> = Vec::new();
-    for web_page in webpages {
-        let agent_thread = agent.clone();
-        let t = thread::spawn(move || {
-            let web_body = agent_thread.get(web_page).call()?.into_string()?;
-            Ok(())
-        });
-        handles.push(t);
-    }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Time taken using Threads: {:.2?}", now.elapsed());
-    Ok(())
+  let webpages = vec![
+    "https://gist.github.com/recluze/1d2989c7e345c8c3c542",
+    "https://gist.github.com/recluze/a98aa1804884ca3b3ad3",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/460157afc6a7492555bb",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/c9bc4130af995c36176d",
+    "https://gist.github.com/recluze/1d2989c7e345c8c3c542",
+    "https://gist.github.com/recluze/a98aa1804884ca3b3ad3",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/460157afc6a7492555bb",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/c9bc4130af995c36176d",
+    "https://gist.github.com/recluze/1d2989c7e345c8c3c542",
+    "https://gist.github.com/recluze/a98aa1804884ca3b3ad3",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/460157afc6a7492555bb",
+    "https://gist.github.com/recluze/5051735efe3fc189b90d",
+    "https://gist.github.com/recluze/c9bc4130af995c36176d",
+  ];
+
+  let agent = Arc::new(AgentBuilder::new().build());
+  let now = Instant::now();
+
+  let mut handles: Vec<JoinHandle<Result<(), ureq::Error>>> = Vec::new();
+
+  for web_page in webpages {
+    let agent_clone = agent.clone();
+
+    let t = thread::spawn(move || {
+      let web_body = agent_clone.get(web_page).call()?.into_string()?;
+      // println!("{}", web_body);
+      Ok(())
+    });
+    handles.push(t);
+  }
+
+  for handle in handles {
+    let _ = handle.join().unwrap();
+  }
+  println!("Time taken using threads: {:.2?}", now.elapsed());
+  Ok(())
 }

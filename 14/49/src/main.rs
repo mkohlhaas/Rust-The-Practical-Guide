@@ -1,21 +1,30 @@
-async fn printing(i: i32) {
-  println!("Task {i}");
+// Tokio Tasks
+
+const NUM_TASKS: u8 = 10;
+
+async fn printing(i: u8) {
+  println!("Task {:0>2}", i);
 }
+
 #[tokio::main]
 async fn main() {
   let mut handles = vec![];
-  for i in 0..3 {
-    let handle = tokio::spawn(async move {
-      println!("Task {i}, printing, first time");
+
+  for i in 1..=NUM_TASKS {
+    // spawns a new asynchronous task, returning a `JoinHandle`
+    let task = tokio::spawn(async move {
+      println!("Task {:0>2}, printing, first time", i);
       printing(i).await;
-      println!("Task {i}, printing, second time");
+      println!("Task {:0>2}, printing, second time", i);
       printing(i).await;
-      println!("Task {i}, completed");
+      println!("Task {:0>2}, completed", i);
     });
-    handles.push(handle);
+    handles.push(task);
   }
+
   for handle in handles {
     handle.await.unwrap();
   }
-  println!("All Tasks are now completed");
+
+  println!("Done!");
 }
