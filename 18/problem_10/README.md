@@ -1,0 +1,1 @@
+- Would be interesting to use `&str` instead of `String`.
