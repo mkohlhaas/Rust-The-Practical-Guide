@@ -16,3 +16,8 @@ macro_rules! string_concat {
     temp_str
   }};
 }
+
+fn main() {
+  let s = string_concat!("foo", " you");
+  println!("{s}");
+}

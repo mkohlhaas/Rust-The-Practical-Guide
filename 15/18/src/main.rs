@@ -3,3 +3,8 @@ macro_rules! add_as {
     $a as $typ + $b as $typ
   };
 }
+
+fn main() {
+  let res = add_as!(1 + 1, 2 * 2, u16);
+  println!("{res}");
+}

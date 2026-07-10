@@ -1,6 +1,8 @@
+#![allow(unused_macros)]
+
 macro_rules! string_concat {
   () => {
-    String::new();
+    String::new()
   };
 
   ($some_str: expr) => {{
@@ -8,4 +10,9 @@ macro_rules! string_concat {
     temp_str.push_str($some_str);
     temp_str
   }};
+}
+
+fn main() {
+  let s = string_concat!("foo");
+  println!("{s}");
 }

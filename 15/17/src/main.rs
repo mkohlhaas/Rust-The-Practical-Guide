@@ -1,4 +1,5 @@
 macro_rules! input {
+  // create a block (additional curly bracket)
   ($t: ty) => {{
     let mut n = String::new();
     std::io::stdin()
@@ -8,4 +9,8 @@ macro_rules! input {
     let n: $t = n.trim().parse().expect("invalid input");
     n
   }};
+}
+
+fn main() {
+  input!(f32);
 }

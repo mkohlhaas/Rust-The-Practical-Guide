@@ -1,5 +1,16 @@
+macro_rules! our_macro {
+  () => {
+    1 + 1
+  };
+}
+
 fn main() {
-  our_macro!();
-  our_macro![];
-  our_macro! {};
+  // all kinds of braces
+  let n1 = our_macro!();
+  let n2 = our_macro![];
+  let n3 = our_macro! {};
+
+  println!("{n1}");
+  println!("{n2}");
+  println!("{n3}");
 }

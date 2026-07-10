@@ -1,3 +1,5 @@
+// Type Capture
+
 macro_rules! input {
   ($t: ty) => {
     let mut n = String::new(); // Error
@@ -8,4 +10,8 @@ macro_rules! input {
     let n: $t = n.trim().parse().expect("invalid input");
     n
   };
+}
+
+fn main() {
+  input!(String)
 }
