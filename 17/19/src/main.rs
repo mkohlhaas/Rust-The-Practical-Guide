@@ -1,4 +1,5 @@
 use regex::Regex;
+
 fn main() {
   let re = Regex::new(r"^aba").unwrap();
   let text = "aba aba bc";

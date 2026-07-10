@@ -1,7 +1,8 @@
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
+
 fn main() {
   // approach 1
-  let mut path = PathBuf::from(r"D:\");
+  let mut path = PathBuf::from(r".");
   path.push(r"Rust");
   path.push(r"Examples");
   path.push(r"my_file");
@@ -9,7 +10,7 @@ fn main() {
   println!("The path is {:?}", path);
 
   // approach 2
-  let path = [r"D:\", r"Rust", r"Examples", r"my_file.txt"]
+  let path = [r".", r"Rust", r"Examples", r"my_file.txt"]
     .iter()
     .collect::<PathBuf>();
   println!("The path is {:?}", path);

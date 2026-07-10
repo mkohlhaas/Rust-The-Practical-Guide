@@ -1,4 +1,5 @@
 use regex::Regex;
+
 fn main() {
   let re = Regex::new(r"gr[ae]y").unwrap();
   let text = "gray grey graye";

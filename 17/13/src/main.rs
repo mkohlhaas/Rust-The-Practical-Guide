@@ -1,4 +1,5 @@
 use regex::Regex;
+
 fn main() {
   let re = Regex::new(r"[prt]ain").unwrap();
   let text = "rrrain spain none";
